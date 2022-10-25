@@ -9,3 +9,13 @@ function testable(target){
 @testable
 class MyTestableClass{}
 console.log("装饰器语法",MyTestableClass.isTestable)
+
+//polyfill
+
+const delay=new Promise(resolve=>console.log("new Promise()"));
+function* helloWorldGenerator() {
+    yield 'hello';
+   yield 'world';
+   return 'ending';
+}
+var hw = helloWorldGenerator();
